@@ -1,0 +1,39 @@
+[merge]
+	tool = kdiff3
+	defaultToUpstream = true
+[core]
+	editor = nano
+[user]
+	name = 
+	email = 
+[i18n]
+	filesEncoding = utf-8
+[push]
+	default = upstream
+[alias]
+	st = status
+	ci = commit
+	cim = commit -c HEAD --reset-author
+	br = branch
+	co = checkout
+	df = diff --color=always
+	dfw = diff --word-diff --color=always
+	dfc = diff --cached --color=always
+	lol = log --graph --color=always
+	lola = log --graph --color=always --all
+	lolu = log --graph --color=always HEAD HEAD@{u}
+	cp = cherry-pick -e
+[status]
+	showUntrackedFiles = all
+[format]
+	pretty = oneline #%C(yellow)%h%Creset%C(cyan)% an%Creset%C(red)%d%Creset% s
+[log]
+	decorate = short
+[rebase]
+	autosquash = true # interprete les commit message !fixup et !squash pour préremplir le TODO du rebase -i
+[clean]
+	requireForce = false
+[branch]
+	autosetupmerge = false
+[help]
+	format = web
