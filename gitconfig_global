@@ -15,6 +15,7 @@
 	ci = commit
 	cim = commit -c HEAD --reset-author
 	br = branch
+	brr = branch -r
 	co = checkout
 	df = diff --color=always
 	dfw = diff --word-diff --color=always
