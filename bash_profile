@@ -1,9 +1,12 @@
 alias ll='ls -lhAF'
 
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ \1/"
+  #git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ \1/"
+  
+  # truc plus générique pour tie
+  git symbolic-ref HEAD 2> /dev/null
 }
-export PS1='\[\e[0;34m\]\t \[\e[0;33m\]\w\[\e[0;31m\]$(parse_git_branch)\[\e[0m\] $ '
+export PS1='\[\e[0;34m\]\t \[\e[0;33m\]\w\[\e[0;31m\] $(parse_git_branch)\[\e[0m\] $ '
 
 export HISTCONTROL=ignoreboth
 
