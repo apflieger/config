@@ -4,12 +4,10 @@
 [core]
 	editor = nano
 [user]
-	name = 
-	email = 
-[i18n]
-	filesEncoding = utf-8
+	name = Arnaud Pflieger
+	useconfigonly = true
 [push]
-	default = upstream
+	default = current
 [alias]
 	st = status
 	ci = commit
@@ -21,9 +19,7 @@
 	dfw = diff --word-diff --color=always
 	dfc = diff --cached --color=always
 	lol = log --graph --color=always
-	lola = log --graph --color=always --all
-	lolu = log --graph --color=always HEAD HEAD@{u}
-	cp = cherry-pick -e
+	cp = cherry-pick
 [status]
 	showUntrackedFiles = all
 [format]
@@ -31,10 +27,16 @@
 [log]
 	decorate = short
 [rebase]
-	autosquash = true # interprete les commit message !fixup et !squash pour préremplir le TODO du rebase -i
+	autosquash = true # interprete les commit message !fixup et !squash pour prÃ©remplir le TODO du rebase -i
 [clean]
 	requireForce = false
 [branch]
 	autosetupmerge = false
 [help]
 	format = web
+[fetch]
+	prune = true
+[branch]
+	autosetupmerge = false
+[pull]
+	rebase = true
